@@ -1,0 +1,176 @@
+[
+  {
+    "id": "poster-1",
+    "name": "Startup Launch",
+    "thumbnail": "https://picsum.photos/seed/startup-launch/640/480",
+    "canvas": {
+      "width": 800,
+      "height": 1100
+    },
+    "layers": [
+      {
+        "id": "bg",
+        "type": "image",
+        "name": "Background",
+        "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='1100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23f8fafc'/><stop offset='1' stop-color='%23e2e8f0'/></linearGradient></defs><rect width='800' height='1100' fill='url(%23g)'/><circle cx='610' cy='290' r='220' fill='%23cbd5e1' opacity='0.45'/><circle cx='260' cy='760' r='260' fill='%23cbd5e1' opacity='0.35'/></svg>",
+        "x": 0,
+        "y": 0,
+        "width": 800,
+        "height": 1100,
+        "draggable": false
+      },
+      {
+        "id": "title",
+        "type": "text",
+        "name": "Title",
+        "text": "LAUNCH DAY",
+        "x": 80,
+        "y": 140,
+        "fontSize": 72,
+        "fontFamily": "Inter",
+        "fill": "#111827",
+        "draggable": true
+      },
+      {
+        "id": "subtitle",
+        "type": "text",
+        "name": "Subtitle",
+        "text": "Your next big product release",
+        "x": 80,
+        "y": 235,
+        "fontSize": 28,
+        "fontFamily": "Inter",
+        "fill": "#374151",
+        "draggable": true
+      },
+      {
+        "id": "cta",
+        "type": "text",
+        "name": "CTA",
+        "text": "Join the event • 6 PM",
+        "x": 80,
+        "y": 940,
+        "fontSize": 26,
+        "fontFamily": "Inter",
+        "fill": "#111827",
+        "draggable": true
+      }
+    ]
+  },
+  {
+    "id": "poster-2",
+    "name": "Minimal Workshop",
+    "thumbnail": "https://picsum.photos/seed/minimal-workshop/640/480",
+    "canvas": {
+      "width": 900,
+      "height": 1200
+    },
+    "layers": [
+      {
+        "id": "bg",
+        "type": "image",
+        "name": "Background",
+        "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='900' height='1200'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23ffffff'/><stop offset='1' stop-color='%23f1f5f9'/></linearGradient></defs><rect width='900' height='1200' fill='url(%23g)'/><rect x='60' y='80' width='780' height='1040' rx='48' fill='%23e2e8f0' opacity='0.55'/><rect x='110' y='140' width='680' height='140' rx='28' fill='%23cbd5e1' opacity='0.45'/></svg>",
+        "x": 0,
+        "y": 0,
+        "width": 900,
+        "height": 1200,
+        "draggable": false
+      },
+      {
+        "id": "badge",
+        "type": "text",
+        "name": "Badge",
+        "text": "WORKSHOP",
+        "x": 80,
+        "y": 110,
+        "fontSize": 22,
+        "fontFamily": "Inter",
+        "fill": "#111827",
+        "draggable": true
+      },
+      {
+        "id": "headline",
+        "type": "text",
+        "name": "Headline",
+        "text": "Design systems\nthat scale",
+        "x": 80,
+        "y": 170,
+        "fontSize": 74,
+        "fontFamily": "Inter",
+        "fill": "#111827",
+        "draggable": true
+      },
+      {
+        "id": "details",
+        "type": "text",
+        "name": "Details",
+        "text": "Sat • 10:00 AM • Online",
+        "x": 80,
+        "y": 930,
+        "fontSize": 28,
+        "fontFamily": "Inter",
+        "fill": "#1f2937",
+        "draggable": true
+      }
+    ]
+  },
+  {
+    "id": "poster-3",
+    "name": "Event Night",
+    "thumbnail": "https://picsum.photos/seed/event-night/640/480",
+    "canvas": {
+      "width": 1080,
+      "height": 1080
+    },
+    "layers": [
+      {
+        "id": "bg",
+        "type": "image",
+        "name": "Background",
+        "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1080' height='1080'><defs><radialGradient id='g' cx='35%' cy='30%' r='80%'><stop offset='0' stop-color='%231d4ed8'/><stop offset='0.55' stop-color='%230f172a'/><stop offset='1' stop-color='%230b1220'/></radialGradient></defs><rect width='1080' height='1080' fill='url(%23g)'/><circle cx='860' cy='260' r='210' fill='%23a855f7' opacity='0.35'/><circle cx='260' cy='820' r='260' fill='%2322c55e' opacity='0.22'/></svg>",
+        "x": 0,
+        "y": 0,
+        "width": 1080,
+        "height": 1080,
+        "draggable": false
+      },
+      {
+        "id": "title",
+        "type": "text",
+        "name": "Title",
+        "text": "NEON NIGHT",
+        "x": 90,
+        "y": 120,
+        "fontSize": 92,
+        "fontFamily": "Inter",
+        "fill": "#ffffff",
+        "draggable": true
+      },
+      {
+        "id": "subtitle",
+        "type": "text",
+        "name": "Subtitle",
+        "text": "Live music • DJ • Drinks",
+        "x": 95,
+        "y": 240,
+        "fontSize": 34,
+        "fontFamily": "Inter",
+        "fill": "#e5e7eb",
+        "draggable": true
+      },
+      {
+        "id": "footer",
+        "type": "text",
+        "name": "Footer",
+        "text": "FRI 8 PM • CITY HALL",
+        "x": 95,
+        "y": 960,
+        "fontSize": 34,
+        "fontFamily": "Inter",
+        "fill": "#ffffff",
+        "draggable": true
+      }
+    ]
+  }
+]
