@@ -28,7 +28,7 @@ export default function LayersPanel({ layers, selectedLayerId, onSelectLayer }) 
               </div>
             </div>
             <div className={`rounded-lg px-2 py-1 text-xs ${isSelected ? "bg-white/10" : "bg-slate-100"}`}>
-              {layer.type === "text" ? "T" : "IMG"}
+              {layer.type === "text" ? "T" : layer.type === "video" ? "VID" : "IMG"}
             </div>
           </button>
         );
