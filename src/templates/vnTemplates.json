@@ -3,7 +3,7 @@
     "id": "vn-recap-1",
     "category": "Recap",
     "name": "Recap Collage",
-    "thumbnail": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='480'><rect width='640' height='480' fill='%23f8fafc'/><rect x='36' y='38' width='276' height='170' rx='18' fill='%23e2e8f0'/><rect x='328' y='38' width='276' height='170' rx='18' fill='%23e2e8f0'/><rect x='36' y='224' width='568' height='220' rx='18' fill='%23e2e8f0'/><rect x='60' y='64' width='228' height='20' rx='10' fill='%23cbd5e1'/><rect x='352' y='64' width='228' height='20' rx='10' fill='%23cbd5e1'/><rect x='60' y='250' width='520' height='20' rx='10' fill='%23cbd5e1'/></svg>",
+    "thumbnail": "https://picsum.photos/seed/recap-collage/640/480",
     "canvas": {
       "width": 720,
       "height": 1280
@@ -83,7 +83,7 @@
     "id": "vn-creative-1",
     "category": "Creative Picks",
     "name": "Creative Grid",
-    "thumbnail": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='480'><rect width='640' height='480' fill='%23f8fafc'/><rect x='36' y='38' width='568' height='120' rx='18' fill='%23e2e8f0'/><rect x='36' y='174' width='180' height='270' rx='18' fill='%23e2e8f0'/><rect x='230' y='174' width='180' height='270' rx='18' fill='%23e2e8f0'/><rect x='424' y='174' width='180' height='270' rx='18' fill='%23e2e8f0'/></svg>",
+    "thumbnail": "https://picsum.photos/seed/creative-grid/640/480",
     "canvas": {
       "width": 1080,
       "height": 1920
@@ -162,7 +162,7 @@
     "id": "vn-birthday-1",
     "category": "Happy Birthday",
     "name": "Birthday Story",
-    "thumbnail": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='480'><rect width='640' height='480' fill='%23f8fafc'/><rect x='36' y='38' width='568' height='330' rx='18' fill='%23e2e8f0'/><rect x='36' y='384' width='568' height='60' rx='18' fill='%23e2e8f0'/><rect x='60' y='400' width='260' height='20' rx='10' fill='%23cbd5e1'/></svg>",
+    "thumbnail": "https://picsum.photos/seed/birthday-story/640/480",
     "canvas": {
       "width": 720,
       "height": 1280
@@ -232,7 +232,7 @@
     "id": "vn-reels-1",
     "category": "Instagram Reels",
     "name": "Reels Frame",
-    "thumbnail": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='480'><rect width='640' height='480' fill='%23f8fafc'/><rect x='36' y='38' width='568' height='406' rx='18' fill='%23e2e8f0'/><rect x='60' y='64' width='220' height='20' rx='10' fill='%23cbd5e1'/></svg>",
+    "thumbnail": "https://picsum.photos/seed/reels-frame/640/480",
     "canvas": {
       "width": 1080,
       "height": 1920
@@ -278,7 +278,7 @@
     "id": "vn-travel-1",
     "category": "Travel",
     "name": "Travel Diary",
-    "thumbnail": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='480'><rect width='640' height='480' fill='%23f8fafc'/><rect x='36' y='38' width='276' height='170' rx='18' fill='%23e2e8f0'/><rect x='328' y='38' width='276' height='170' rx='18' fill='%23e2e8f0'/><rect x='36' y='224' width='568' height='220' rx='18' fill='%23e2e8f0'/><rect x='60' y='64' width='228' height='20' rx='10' fill='%23cbd5e1'/><rect x='352' y='64' width='228' height='20' rx='10' fill='%23cbd5e1'/><rect x='60' y='250' width='520' height='20' rx='10' fill='%23cbd5e1'/></svg>",
+    "thumbnail": "https://picsum.photos/seed/travel-diary/640/480",
     "canvas": {
       "width": 1080,
       "height": 1920
@@ -358,7 +358,7 @@
     "id": "vn-fashion-1",
     "category": "Fashion",
     "name": "Fashion Lookbook",
-    "thumbnail": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='480'><rect width='640' height='480' fill='%23f8fafc'/><rect x='36' y='38' width='568' height='330' rx='18' fill='%23e2e8f0'/><rect x='36' y='384' width='180' height='60' rx='18' fill='%23e2e8f0'/><rect x='230' y='384' width='180' height='60' rx='18' fill='%23e2e8f0'/><rect x='424' y='384' width='180' height='60' rx='18' fill='%23e2e8f0'/></svg>",
+    "thumbnail": "https://picsum.photos/seed/fashion-lookbook/640/480",
     "canvas": {
       "width": 1080,
       "height": 1920
@@ -437,7 +437,7 @@
     "id": "vn-food-1",
     "category": "Food",
     "name": "Food Story",
-    "thumbnail": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='480'><rect width='640' height='480' fill='%23f8fafc'/><rect x='36' y='38' width='180' height='270' rx='18' fill='%23e2e8f0'/><rect x='230' y='38' width='180' height='270' rx='18' fill='%23e2e8f0'/><rect x='424' y='38' width='180' height='270' rx='18' fill='%23e2e8f0'/><rect x='36' y='324' width='568' height='120' rx='18' fill='%23e2e8f0'/></svg>",
+    "thumbnail": "https://picsum.photos/seed/food-story/640/480",
     "canvas": {
       "width": 1080,
       "height": 1920
@@ -517,7 +517,7 @@
     "id": "vn-music-1",
     "category": "Music",
     "name": "Music Vibes",
-    "thumbnail": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='480'><rect width='640' height='480' fill='%23f8fafc'/><rect x='36' y='38' width='568' height='406' rx='18' fill='%23e2e8f0'/><rect x='60' y='64' width='520' height='20' rx='10' fill='%23cbd5e1'/><rect x='60' y='400' width='180' height='20' rx='10' fill='%23cbd5e1'/></svg>",
+    "thumbnail": "https://picsum.photos/seed/music-vibes/640/480",
     "canvas": {
       "width": 1080,
       "height": 1920
@@ -575,7 +575,7 @@
     "id": "vn-fitness-1",
     "category": "Fitness",
     "name": "Fitness Journey",
-    "thumbnail": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='480'><rect width='640' height='480' fill='%23f8fafc'/><rect x='36' y='38' width='276' height='170' rx='18' fill='%23e2e8f0'/><rect x='328' y='38' width='276' height='170' rx='18' fill='%23e2e8f0'/><rect x='36' y='224' width='568' height='220' rx='18' fill='%23e2e8f0'/><rect x='60' y='64' width='228' height='20' rx='10' fill='%23cbd5e1'/><rect x='352' y='64' width='228' height='20' rx='10' fill='%23cbd5e1'/><rect x='60' y='250' width='520' height='20' rx='10' fill='%23cbd5e1'/></svg>",
+    "thumbnail": "https://picsum.photos/seed/fitness-journey/640/480",
     "canvas": {
       "width": 1080,
       "height": 1920
@@ -655,7 +655,7 @@
     "id": "vn-pets-1",
     "category": "Pets",
     "name": "Pet Stories",
-    "thumbnail": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='480'><rect width='640' height='480' fill='%23f8fafc'/><rect x='36' y='38' width='568' height='330' rx='18' fill='%23e2e8f0'/><rect x='36' y='384' width='568' height='60' rx='18' fill='%23e2e8f0'/><rect x='60' y='400' width='260' height='20' rx='10' fill='%23cbd5e1'/></svg>",
+    "thumbnail": "https://picsum.photos/seed/pet-stories/640/480",
     "canvas": {
       "width": 1080,
       "height": 1920
@@ -725,7 +725,7 @@
     "id": "vn-art-1",
     "category": "Art",
     "name": "Art Gallery",
-    "thumbnail": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='480'><rect width='640' height='480' fill='%23f8fafc'/><rect x='36' y='38' width='180' height='270' rx='18' fill='%23e2e8f0'/><rect x='230' y='38' width='180' height='270' rx='18' fill='%23e2e8f0'/><rect x='424' y='38' width='180' height='270' rx='18' fill='%23e2e8f0'/><rect x='36' y='324' width='568' height='120' rx='18' fill='%23e2e8f0'/></svg>",
+    "thumbnail": "https://picsum.photos/seed/art-gallery/640/480",
     "canvas": {
       "width": 1080,
       "height": 1920

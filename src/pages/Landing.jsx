@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ChatInput from "../components/ChatInput";
+import FloatingActionButton from "../components/FloatingActionButton";
 
 export default function Landing() {
   const navigate = useNavigate();
@@ -112,9 +113,10 @@ export default function Landing() {
       <footer className="border-t border-slate-200 bg-white">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6 text-xs text-slate-500">
           <div>Final Year Project • AI-powered template editor</div>
-          <div>React • Tailwind • Konva</div>
         </div>
       </footer>
+
+      <FloatingActionButton />
     </div>
   );
 }

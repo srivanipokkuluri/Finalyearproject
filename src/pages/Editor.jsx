@@ -4,6 +4,7 @@ import Canvas from "../components/Canvas";
 import Toolbar from "../components/Toolbar";
 import LayersPanel from "../components/LayersPanel";
 import AITools from "../components/AITools";
+import MusicPanel from "../components/MusicPanel";
 
 function deepClone(value) {
   return JSON.parse(JSON.stringify(value));
@@ -15,27 +16,81 @@ export default function Editor() {
   const canvasRef = useRef(null);
 
   const template = location.state?.template;
+  const uploadedMedia = location.state?.uploadedMedia;
 
-  const [layers, setLayers] = useState(() => (template?.layers ? deepClone(template.layers) : []));
+  const [layers, setLayers] = useState(() => {
+    if (uploadedMedia) {
+      // Create a new project with uploaded media
+      return [
+        {
+          id: "background",
+          type: "image",
+          name: "Background",
+          src: uploadedMedia.url,
+          x: 0,
+          y: 0,
+          width: 800,
+          height: 600,
+          draggable: false,
+        },
+        {
+          id: "title-text",
+          type: "text",
+          name: "Title",
+          text: "Your Title Here",
+          x: 50,
+          y: 50,
+          fontSize: 48,
+          fontFamily: "Inter",
+          fill: "#ffffff",
+          draggable: true,
+        },
+        {
+          id: "subtitle-text",
+          type: "text",
+          name: "Subtitle",
+          text: "Add your subtitle",
+          x: 50,
+          y: 120,
+          fontSize: 24,
+          fontFamily: "Inter",
+          fill: "#ffffff",
+          draggable: true,
+        }
+      ];
+    }
+    return template?.layers ? deepClone(template.layers) : [];
+  });
+
   const [selectedLayerId, setSelectedLayerId] = useState(() => {
+    if (uploadedMedia) {
+      return "title-text"; // Select title text by default for new projects
+    }
     const firstText = template?.layers?.find((l) => l.type === "text");
     return firstText?.id || null;
   });
+
   const [statusMessage, setStatusMessage] = useState("");
+  const [selectedMusic, setSelectedMusic] = useState(null);
+  const [videoFrames, setVideoFrames] = useState([]);
 
   useEffect(() => {
-    if (!template) {
+    if (!template && !uploadedMedia) {
       navigate("/templates", { replace: true });
     }
-  }, [template, navigate]);
+  }, [template, uploadedMedia, navigate]);
 
   useEffect(() => {
-    if (!template) return;
-    setLayers(deepClone(template.layers));
-    const firstText = template.layers.find((l) => l.type === "text");
-    setSelectedLayerId(firstText?.id || null);
-    setStatusMessage("");
-  }, [template]);
+    if (uploadedMedia) {
+      // Set status for new project with uploaded media
+      setStatusMessage(`New project created with ${uploadedMedia.name}`);
+    } else if (template) {
+      setLayers(deepClone(template.layers));
+      const firstText = template.layers.find((l) => l.type === "text");
+      setSelectedLayerId(firstText?.id || null);
+      setStatusMessage("");
+    }
+  }, [template, uploadedMedia]);
 
   const selectedLayer = useMemo(() => {
     return layers.find((l) => l.id === selectedLayerId) || null;
@@ -57,8 +112,8 @@ export default function Editor() {
         return prev.map((l) => (l.id === "caption" ? { ...l, text: caption } : l));
       }
 
-      const width = template?.canvas?.width || 800;
-      const height = template?.canvas?.height || 1100;
+      const width = template?.canvas?.width || (uploadedMedia ? 800 : 800);
+      const height = template?.canvas?.height || (uploadedMedia ? 600 : 1100);
 
       const nextLayer = {
         id: "caption",
@@ -84,10 +139,32 @@ export default function Editor() {
     navigate("/preview", {
       state: {
         dataUrl,
-        templateName: template?.name || "Untitled",
+        selectedMusic,
+        layers,
       },
     });
   };
+
+  const handleMusicSelect = (music) => {
+    setSelectedMusic(music);
+    if (music) {
+      setStatusMessage(`Music applied: ${music.name}`);
+    } else {
+      setStatusMessage("Music removed");
+    }
+  };
+
+  useEffect(() => {
+    const mockFrames = Array.from({ length: 10 }, (_, i) => ({
+      index: i,
+      timestamp: i * 2, // Every 2 seconds
+      brightness: Math.random() * 0.8 + 0.2,
+      dominantColor: `hsl(${Math.random() * 360}, 70%, 60%)`,
+      motionLevel: Math.random(),
+      hasFaces: Math.random() > 0.7
+    }));
+    setVideoFrames(mockFrames);
+  }, []);
 
   if (!template) {
     return (
@@ -116,10 +193,12 @@ export default function Editor() {
   return (
     <div className="min-h-full bg-slate-50">
       <header className="border-b border-slate-200 bg-white">
-        <div className="mx-auto flex w-full max-w-[1400px] items-center justify-between px-4 py-4 sm:px-6">
+        <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between px-4 py-4 sm:px-6">
           <div>
             <div className="text-sm font-semibold text-slate-900">Editor</div>
-            <div className="mt-1 text-xs text-slate-500">{template.name}</div>
+            <div className="mt-1 text-xs text-slate-500">
+              {template ? template.name : uploadedMedia ? `New Project - ${uploadedMedia.name}` : 'Untitled Project'}
+            </div>
           </div>
 
           <div className="flex items-center gap-2">
@@ -140,7 +219,7 @@ export default function Editor() {
         </div>
       </header>
 
-      <main className="mx-auto grid w-full max-w-[1400px] gap-4 px-4 py-4 sm:px-6 lg:grid-cols-[280px_1fr_280px]">
+      <main className="mx-auto grid w-full max-w-[1600px] gap-4 px-4 py-4 sm:px-6 lg:grid-cols-[280px_1fr_280px]">
         <aside className="grid gap-4">
           <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
             <div className="text-xs font-semibold text-slate-900">Toolbar</div>
@@ -176,15 +255,15 @@ export default function Editor() {
               <div className="mt-1 text-xs text-slate-500">Drag layers. Click to select.</div>
             </div>
             <div className="rounded-lg bg-slate-100 px-3 py-2 text-xs font-medium text-slate-700">
-              {template.canvas.width} × {template.canvas.height}
+              {template ? `${template.canvas.width} × ${template.canvas.height}` : uploadedMedia ? '800 × 600' : '800 × 1100'}
             </div>
           </div>
 
           <div className="mt-4 overflow-auto rounded-xl border border-slate-200 bg-slate-50 p-3">
             <Canvas
               ref={canvasRef}
-              canvasWidth={template.canvas.width}
-              canvasHeight={template.canvas.height}
+              canvasWidth={template?.canvas?.width || (uploadedMedia ? 800 : 800)}
+              canvasHeight={template?.canvas?.height || (uploadedMedia ? 600 : 1100)}
               layers={layers}
               selectedLayerId={selectedLayerId}
               onSelectLayer={(id) => setSelectedLayerId(id)}
@@ -193,16 +272,24 @@ export default function Editor() {
           </div>
         </section>
 
-        <aside className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-          <div className="text-xs font-semibold text-slate-900">Layers</div>
-          <div className="mt-1 text-xs text-slate-500">Select a layer to edit</div>
-          <div className="mt-4">
-            <LayersPanel
-              layers={layers}
-              selectedLayerId={selectedLayerId}
-              onSelectLayer={(id) => setSelectedLayerId(id)}
-            />
+        <aside className="grid gap-4">
+          <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+            <div className="text-xs font-semibold text-slate-900">Layers</div>
+            <div className="mt-1 text-xs text-slate-500">Select a layer to edit</div>
+            <div className="mt-4">
+              <LayersPanel
+                layers={layers}
+                selectedLayerId={selectedLayerId}
+                onSelectLayer={(id) => setSelectedLayerId(id)}
+              />
+            </div>
           </div>
+
+          <MusicPanel
+            onMusicSelect={handleMusicSelect}
+            videoDuration={template?.duration || 30}
+            videoFrames={videoFrames}
+          />
         </aside>
       </main>
     </div>
